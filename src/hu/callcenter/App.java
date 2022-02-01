@@ -27,15 +27,5 @@ public class App {
 
     private void run() {
         System.out.println("3. feladat");
-        System.out.println(callService.getCallStatisticByHour());
-        System.out.println("4. feladat");
-        System.out.println(callService.getLongestCallDetails());
-        System.out.println("5. feladat");
-        System.out.print("Adjon meg egy időpontot! (óra perc másodperc): ");
-        LogTime time = dataParser.parseTime(console.read());
-        System.out.println(callService.getActualCallerDetails(time));
-        System.out.println("6. feladat");
-        System.out.println(callService.getLastHappyCallerDetails());
-        fileWriter.writeAll(callService.getSpeakersList());
     }
 }
