@@ -27,5 +27,13 @@ public class App {
 
     private void run() {
         System.out.println("3. feladat");
+        System.out.println(callService.getCallStatisticByHour());
+        System.out.println("4. feladat");
+        System.out.println(callService.getLongestCallDetails());
+        System.out.println("5. feladat");
+        System.out.println("Adjon meg egy időpontot! (óra perc másodperc) ");
+        String read = console.read();
+        LogTime time = dataParser.parseTime(read);
+        System.out.println(callService.getActualCallerDetails(time));
     }
 }
